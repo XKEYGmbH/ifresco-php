@@ -1,0 +1,13 @@
+{
+    "name": "XKEYGmbH/ifresco-php",
+    "description": "ifresco php client",
+    "authors": [
+        {
+            "name": "Dominik Danninger",
+            "email": "ddanninger@xkey.at"
+        }
+    ],
+    "require": {
+		"guzzle/guzzle": "*"
+    }
+}
