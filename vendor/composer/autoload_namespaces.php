@@ -6,6 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ifresco\\Tests' => $baseDir . '/tests/',
+    'ifresco' => $baseDir . '/src/',
     'Symfony\\Component\\EventDispatcher' => $vendorDir . '/symfony/event-dispatcher/',
     'Guzzle\\Tests' => $vendorDir . '/guzzle/guzzle/tests/',
     'Guzzle' => $vendorDir . '/guzzle/guzzle/src/',

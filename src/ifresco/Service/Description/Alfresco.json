@@ -1,0 +1,62 @@
+{
+    "name": "Alfresco",
+    "apiVersion": "2012-10-14",
+    "description": "Alfresco REST Service",
+    "operations": {
+        "Login": {
+            "httpMethod": "GET",
+            "uri": "/alfresco/service/api/login?u={username}&pw={password}",
+            "summary": "Login",
+            "responseClass": "GetTicket",
+            "parameters": {
+                "username": {
+                    "location": "uri",
+                    "type": "string"
+                },
+                "password": {
+                    "location": "uri",
+                    "type": "string"
+                }
+            }
+        },
+        "GetUsers": {
+            "httpMethod": "GET",
+            "uri": "/alfresco/service/api/people?filter={filter}",
+            "summary": "User List",
+            "responseClass": "GetUsersOutput",
+            "parameters": {
+                "filter": {
+                    "location": "uri",
+                    "type": "string"
+                }
+            }
+        }  
+    },
+    "models": {
+        "GetUsersOutput": {
+            "type": "array",
+            "people": {
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "location": "json",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "location": "json",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "GetTicket": {
+            "type": "object",
+            "properties": {
+                "ticket": {
+                    "location": "json",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

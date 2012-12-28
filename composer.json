@@ -1,6 +1,7 @@
 {
     "name": "XKEYGmbH/ifresco-php",
     "description": "ifresco php client",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dominik Danninger",
@@ -8,6 +9,19 @@
         }
     ],
     "require": {
+        "php": ">=5.3.2",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": { 
+            "ifresco\\Tests": "tests/",
+            "ifresco": "src/"
+        }
+    },
+    "require": {
 		"guzzle/guzzle": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
     }
 }
